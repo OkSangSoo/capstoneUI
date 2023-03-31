@@ -16,12 +16,17 @@ export default function App() {
   return (
     <div>
       <BrowserView>
-        <Link to="/transfer/account">account on Browser</Link><br/>
-        <Link to="/log/main">log on Browser</Link>
+        <Link to="/transfer/account">transfer on Browser</Link><br/>
+        <Link to="/log/main">log on Browser</Link><br/>
+        <Link to="/qna/register">qna register on Browser </Link><br/>
+        <Link to="/qna/log/main">qna log on Browser</Link><br/>
       </BrowserView>
+
       <MobileView>
-        <Link to="/transfer/account">account on Mobile</Link>
-        <Link to="/log/main">log on Mobile</Link>
+        <Link to="/transfer/account">transfer on Mobile</Link><br/>
+        <Link to="/log/main">log on Mobile</Link><br/>
+        <Link to="/qna/register">qna register on Mobile</Link><br/>
+        <Link to="/qna/log/main">qna log on Mobile</Link><br/>
       </MobileView>
 
 

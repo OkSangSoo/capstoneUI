@@ -12,9 +12,9 @@ function TransferLogMain() {
     const [searchVal, setSearchVal] = useState("");
 
     const transfers = [
-        {code:"DEP", amount: "100", account:"1234543", name:"AAA", date:"20230328", transferID:"1"},
-        {code:"WITH", amount: "200", account:"5432112", name:"BBB", date:"20230329", transferID:"2"},
-        {code:"DEP", amount: "150", account:"1234567", name:"CCC", date:"20230330", transferID:"3"},
+        {code:0, amount: "100", account:"1234543", name:"AAA", date:"20230328", transferID:"1"},
+        {code:1, amount: "200", account:"5432112", name:"BBB", date:"20230329", transferID:"2"},
+        {code:0, amount: "150", account:"1234567", name:"CCC", date:"20230330", transferID:"3"},
     ];
 
     const terms = [
@@ -27,7 +27,7 @@ function TransferLogMain() {
 
     const handleSelect = e =>{
         setSelectedTerm(e);
-        console.log(e);
+        //console.log(e);
     };
 
     return(
@@ -48,7 +48,7 @@ function TransferLogMain() {
 
                     <Card title="거래내역" className="mainBox">
                         {transfers.map((transfer) => (
-                            <Card title={"Account : " + transfer.account} extra={transfer.code} key={transfer.transferID} className="detailBox">
+                            <Card title={"Account : " + transfer.account} extra={<span style={transfer.code ? {color : 'blue'} : {color : 'red'}}>{transfer.code ? "입금" : "출금"}</span>} key={transfer.transferID} className="detailBox">
                                 <p>{"Name : " + transfer.name}</p>
                                 <p>{"Amount : " + transfer.amount}</p>
                                 <p>{"Date : " + transfer.date}</p>

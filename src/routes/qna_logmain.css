@@ -1,3 +1,11 @@
+.qnaStatus {
+    width: 20%;
+    margin-right:5%;
+}
+
+.qnaTitle {
+    
+}
 .filterGrid {
     position:absolute;
     top: 10%;
@@ -51,6 +59,7 @@
     overflow: auto;
 }
 
-.detailBox{
+.clickableDetailBox{
     margin-bottom:2%;
+    cursor:pointer;
 }
